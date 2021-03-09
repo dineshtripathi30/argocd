@@ -10,6 +10,6 @@ spec:
   containers:
   - image: nginx
     name: argodeploy
-    ports:
-    - containerPort: 80
     resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always

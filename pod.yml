@@ -8,7 +8,7 @@ metadata:
   namespace: simple
 spec:
   containers:
-  - image: nginx:1.19-alpine
+  - image: alpine
     name: argodeploy
     resources: {}
   dnsPolicy: ClusterFirst

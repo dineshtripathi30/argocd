@@ -5,7 +5,7 @@ metadata:
   labels:
     run: argodeploy
   name: argodeploy
-  namespace: petclinic
+  namespace: simple
 spec:
   containers:
   - image: nginx

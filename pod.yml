@@ -8,15 +8,8 @@ metadata:
   namespace: petclinic
 spec:
   containers:
-  - command:
-    - /bin/sh
-    - sleep
-    - "3600"
-    image: nginx
+  - image: nginx
     name: argodeploy
     ports:
     - containerPort: 80
     resources: {}
-  dnsPolicy: ClusterFirst
-  restartPolicy: Always
-status: {}

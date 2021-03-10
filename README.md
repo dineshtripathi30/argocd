@@ -12,15 +12,19 @@ ArgoCD is a CD tool and works with kubernetes based resources.
 
 ## This is an example of how to do a GitOps with ArgoCD.
 ### Lab Steps
-* This command will generate a sample job file, Modify it according to your requirement
+* Step 1 - Create namespace
   ```sh
-  
+  kubectl create namespace argocd
   ```
-* Create deployment
+* Install ArgoCD
   ```sh
-  
+  kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
   ```
-* deployment output
+* Port forward to access the service
   ```sh
-  
+  kubectl port-forward svc/argocd-server -n argocd 8080:443
+  ```
+* Run the below command to get the password and user username as admin
+  ```sh
+  kubectl get pods -n argocd -l app.kubernetes.io/name=argocd-server -o name | cut -d'/' -f 2
   ```

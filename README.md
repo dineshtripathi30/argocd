@@ -28,4 +28,4 @@ ArgoCD is a CD tool and works with kubernetes based resources.
   ```sh
   kubectl get pods -n argocd -l app.kubernetes.io/name=argocd-server -o name | cut -d'/' -f 2
   ```
-  ![ArgoCD Dashboard](argocd.png)
+  ![alt text](https://github.com/dineshtripathi30/argocd/blob/main/img/argocd.png?raw=true)
